@@ -87,7 +87,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Triangle card -->
                 <div class="card w-96 bg-base-100 shadow-xl">
                     <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
@@ -100,15 +100,43 @@
                         </div>
                     </div>
                 </div>
-                <!-- Triangle card -->
+                <!-- Pentagon card -->
                 <div class="card w-96 bg-base-100 shadow-xl">
-                    <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                            alt="Shoes" /></figure>
+                    <figure><img src="/images/pentagon.png" alt="Shoes" /></figure>
                     <div class="card-body">
-                        <h2 class="card-title">Shoes!</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <h2 class="card-title">Pentagon!</h2>
+                        <p>Area = 0.5 * p * b</p>
+                        <div class="flex gap-5">
+                            <input class="w-24 text-2xl p-2 rounded-sm" type="text" name="" id="pentagon-perimeter"
+                                placeholder="Peri">
+                            <input class="w-24 text-2xl p-2 rounded-sm" type="text" name="" id="pentagon-apothem"
+                                placeholder="apo">
+                        </div>
+                        <div>
+                            <p>Area: <span id="pentagon-area">0</span></p>
+                        </div>
                         <div class="card-actions justify-end">
-                            <button class="btn btn-primary">Buy Now</button>
+                            <button onclick="calculatePentagonArea()" class="btn btn-primary w-full">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Ellipse card -->
+                <div class="card w-96 bg-base-100 shadow-xl">
+                    <figure><img src="images/ellipse.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Ellipse!</h2>
+                        <p>Area = π * a * b</p>
+                        <div class="flex gap-5">
+                            <input class="w-24 text-2xl p-2 rounded-sm" type="text" name="" id="ellipse-major-radius"
+                                placeholder="major">
+                            <input class="w-24 text-2xl p-2 rounded-sm" type="text" name="" id="ellipse-minor-radius"
+                                placeholder="minor">
+                        </div>
+                        <div>
+                            <p>Area: <span id="ellipse-area">0</span></p>
+                        </div>
+                        <div class="card-actions justify-end">
+                            <button onclick="calculateEllipseArea()" class="btn btn-primary w-full">calculate</button>
                         </div>
                     </div>
                 </div>
@@ -118,10 +146,14 @@
                 <h3 class="text-3xl text-center p-4 ">Area calculation</h3>
             </div>
         </div>
+
+
     </main>
     <script src="script/triangle-calculate.js"></script>
     <script src="script/rectangle.js"></script>
     <script src="script/parallelogram.js"></script>
+    <script src="script/pentagon-area.js"></script>
+    <script src="script/ellipse.js"></script>
 </body>
 
 </html>
